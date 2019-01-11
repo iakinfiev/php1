@@ -1,0 +1,47 @@
+<?php
+
+// 3.
+    // $a = 5;
+    // $b = '05';
+    // echo '<pre>';var_dump($a == $b); echo"Почему true?    равенство после преобразования типов"; echo '</pre>';
+    // echo '<pre>';var_dump((int)'012345'); echo "приведение к целочисленному типу"; echo '</pre>';     
+    // echo '<pre>';var_dump((float)123.0 === (int)123.0); echo"float != int"; echo '</pre>'; // Почему false?
+    // var_dump((int)0 === (int)'hello, world'); echo"приведение строки к целочисленному дает 0 => int(0) === int(0)"; // Почему true?
+
+// 4. Используя имеющийся HTML шаблон, сделать так, чтобы главная страница генерировалась через PHP. Создать блок переменных в начале страницы. Сделать так, чтобы h1, title и текущий год генерировались в блоке контента из созданных переменных.
+<?php 
+    $data = [
+        'h1' => 'Текущая дата:',
+        'title' => 'The HTML5 Herald',
+        'date' => date("F j, Y, g:i a")
+    ];
+?>
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title><?php echo($data['title']); ?></title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+    </head>
+
+    <body>  
+        <h1><?php echo($data['h1']); ?></h1><?php echo($data['date']); ?>
+    </body>
+</html>
+
+
+// 5. *Используя только две переменные, поменяйте их значение местами. Например, если a = 1, b = 2, надо, чтобы получилось: b = 1, a = 2. Дополнительные переменные использовать нельзя.
+<?php
+/*
+ 
+$a = 1;
+$b = 2;
+
+//[$a,$b] = [$b,$a];  // начиная с версии 7.1
+//$a+=+$b-$b=$a;
+//list($a,$b)=[$b,$a];
+//$a/=$b=($a*=$b)/$b;
+//$a=$a+$b-($b=$a);
+*/
+?>
